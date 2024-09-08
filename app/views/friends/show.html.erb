@@ -1,0 +1,21 @@
+<div class="col-md-6">
+  <div class="h-100 p-5 bg-light border rounded-3">      
+    <!-- <p style="color: green"><%= notice %></p> -->
+    <h1>
+    <%= @friend.first_name.capitalize %>
+    <%= @friend.last_name.capitalize %>
+    </h1>
+    <p class="lead">
+    <%= @friend.email %>  | 
+    <%= @friend.phone %>  |  
+    <%= @friend.twitter %>
+    </p>
+
+
+    <div class="col" >
+      <%= link_to "Edit", edit_friend_path(@friend),class: "btn btn-primary" %>
+      <%= link_to "Back", friends_path, class:"btn btn-secondary" %>
+      <%= button_to "Delete", @friend, method: :delete, class:"btn btn-danger" %>
+    </div>
+  </div>
+</div>
